@@ -1,0 +1,12 @@
+apiVersion: mysql.my.test.domain/v1
+kind: MySQLInstance
+metadata:
+  labels:
+    app.kubernetes.io/name: mysqlinstance
+    app.kubernetes.io/instance: mysqlinstance-sample
+    app.kubernetes.io/part-of: crdproject
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: crdproject
+  name: mysqlinstance-sample
+spec:
+  # TODO(user): Add fields here

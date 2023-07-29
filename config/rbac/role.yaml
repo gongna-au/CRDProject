@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - mysql.my.domain
+  resources:
+  - mysqlinstances
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - mysql.my.domain
+  resources:
+  - mysqlinstances/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - mysql.my.domain
+  resources:
+  - mysqlinstances/status
+  verbs:
+  - get
+  - patch
+  - update
